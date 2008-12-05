@@ -4,6 +4,8 @@ Donate link: http://buy.semiologic.com/drink
 Tags: author-image
 Requires at least: 2.0
 Tested up to: 2.6.5
+Stable tag: trunk
+
 
 The author image plugin for WordPress lets you easily add author images to posts and articles on your site
 

@@ -12,19 +12,31 @@ The author image plugin for WordPress lets you easily add author images to posts
 
 The author image plugin for WordPress lets you easily add author images to posts and articles on your site
 
-It creates a widget that you can insert in a sidebar, or much about anywhere if using the [Semiologic theme](http://www.semiologic.com/software/wp-themes/sem-theme/).
+It creates a widget that you can insert in a sidebar, or much about anywhere if using of the [Semiologic](http://www.semiologic.com/software/wp-themes/sem-theme/) or [Semiologic Reloaded]((http://www.semiologic.com/software/wp-themes/sem-reloaded/)) themes.
+
+Alternatively, place the following call in the loop where you want the author image to appear:
+
+    <?php the_author_image(); ?>
+
+Lastly, browse Users / Your Profile in the admin area, upload an image file, and you're done.
 
 
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Make the `wp-content` folder writable by your server (chmod 777)
+
+
+== Screenshots ==
+
+1. Screenshot of Author Image in action
 
 
 == Frequently Asked Questions ==
 
 = Help Me! =
 
-Feel very free to report issues in the [Semiologic forums](http://forum.semiologic.com).
+The [Semiologic forum](http://forum.semiologic.com) is the best place to report issues. Please note, however, that while community members and I do our best to answer all queries, we're assisting you on a voluntary basis.
 
-Please note, however, that we generally stick to assisting [Semiologic Pro](http://www.getsemiologic.com) users.
+If you require more dedicated assistance, consider using [Semiologic Pro](http://www.getsemiologic.com).

@@ -13,7 +13,7 @@ The author image plugin for WordPress lets you easily add author images to posts
 
 The author image plugin for WordPress lets you easily add author images to posts and articles on your site
 
-It creates a widget that you can insert in a sidebar, or much about anywhere if using the [Semiologic theme](http://www.semiologic.com/software/themes/sem-theme/).
+It creates a widget that you can insert in a sidebar, or much about anywhere if using the [Semiologic theme](http://www.semiologic.com/software/wp-themes/sem-theme/).
 
 
 == Installation ==

@@ -37,6 +37,27 @@ Lastly, browse Users / Your Profile in the admin area, upload an image file, and
 
 == Frequently Asked Questions ==
 
+= Image Style =
+
+You can use the `.entry_author_image` CSS class to customize where and how the image appears.
+
+For instance:
+
+    .entry_author_image
+    {
+      float: left;
+      border: solid 1px outset;
+      margin: 1.2em 1.2em 0px .1em;
+    }
+
+
+= Overriding CSS Floats =
+
+When displaying wide videos, images or tabular data, it becomes desirable to bump the content below the author's image. To achieve this, insert the following code in your post:
+
+	<div style="clear:both;"></div>
+
+
 = Help Me! =
 
 The [Semiologic forum](http://forum.semiologic.com) is the best place to report issues. Please note, however, that while community members and I do our best to answer all queries, we're assisting you on a voluntary basis.

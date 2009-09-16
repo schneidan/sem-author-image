@@ -1,26 +1,48 @@
 === Author Image ===
-Contributors: Denis-de-Bernardy, Semiologic
-Donate link: http://buy.semiologic.com/drink
+Contributors: Denis-de-Bernardy
+Donate link: http://www.semiologic.com/partners/
 Tags: author-image, semiologic
-Requires at least: 2.1
-Tested up to: 2.7
+Requires at least: 2.8
+Tested up to: 2.8.4
 Stable tag: trunk
 
 
-The author image plugin for WordPress lets you easily add author images to posts and articles on your site
+Lets you easily add author images on your site.
 
 
 == Description ==
 
-The author image plugin for WordPress lets you easily add author images to posts and articles on your site
+The author image plugin for WordPress lets you easily add author images on your site.
 
-It creates a widget that you can insert in a sidebar, or much about anywhere if using any of the [Semiologic](http://www.semiologic.com/software/wp-themes/sem-theme/) or [Semiologic Reloaded](http://www.semiologic.com/software/wp-themes/sem-reloaded/) themes.
+It creates a widget that you can insert in a sidebar, or much about anywhere if using the [Semiologic theme](http://www.semiologic.com/software/sem-reloaded/).
 
 Alternatively, place the following call in the loop where you want the author image to appear:
 
     <?php the_author_image(); ?>
 
-Lastly, browse Users / Your Profile in the admin area, upload an image file, and you're done.
+To configure your author image, browse Users / Your Profile in the admin area.
+
+= Author's Bio =
+
+You can configure the widget so it outputs the author's description in addition to his image.
+
+This fits well on a site where the author's image is placed in a sidebar, or the [Semiologic theme](http://www.semiologic.com/software/sem-reloaded/) when the widget is placed immediately after the posts' content -- i.e. "About The Author."
+
+= Multi-Author Sites =
+
+For sites with multitudes of authors, the widget offers the ability to insert a link to the author's posts -- his archives.
+
+= Single Author Sites =
+
+Normally, the widget will only display an author image when it can clearly identify who the content's author actually is. In other words, on singular pages or in the loop.
+
+If you run a single author site, or a site with multiple ghost writers, be sure to check the "This site has a single author" option. The widget will then output your image at all times.
+
+= Help Me! =
+
+The [Semiologic forum](http://forum.semiologic.com) is the best place to report issues. Please note, however, that while community members and I do our best to answer all queries, we're assisting you on a voluntary basis.
+
+If you require more dedicated assistance, consider using [Semiologic Pro](http://www.getsemiologic.com).
 
 
 == Installation ==
@@ -43,8 +65,7 @@ You can use the `.entry_author_image` CSS class to customize where and how the i
 
 For instance:
 
-    .entry_author_image
-    {
+    .entry_author_image {
       float: left;
       border: solid 1px outset;
       margin: 1.2em 1.2em 0px .1em;
@@ -58,8 +79,12 @@ When displaying wide videos, images or tabular data, it becomes desirable to bum
 	<div style="clear:both;"></div>
 
 
-= Help Me! =
+== Change Log ==
 
-The [Semiologic forum](http://forum.semiologic.com) is the best place to report issues. Please note, however, that while community members and I do our best to answer all queries, we're assisting you on a voluntary basis.
+= 4.0 =
 
-If you require more dedicated assistance, consider using [Semiologic Pro](http://www.getsemiologic.com).
+- WP_Widget class
+- Allow to add the author's bio after the image
+- Allow to add a link to the author's posts on the image
+- Localization
+- Code enhancements and optimizations

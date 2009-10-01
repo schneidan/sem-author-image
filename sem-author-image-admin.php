@@ -37,7 +37,7 @@ class author_image_admin {
 		$author_id = $profileuser->ID;
 		
 		$author_image = author_image::get_meta($author_id);
-		$author_image_url = content_url() . '/authors/' . $author_image;
+		$author_image_url = content_url() . '/authors/' . str_replace(' ', rawurlencode(' '), $author_image);
 		
 		echo '<table class="form-table">';
 		
@@ -174,9 +174,6 @@ class author_image_admin {
 				$perms = $stat['mode'] & 0000666;
 				@chmod($new_name, $perms);
 			}
-			
-			delete_transient('author_image_cache');
-			delete_usermeta($user_ID, 'author_image_cache');
 		} elseif ( isset($_POST['delete_author_image']) ) {
 			$user = get_userdata($user_ID);
 			$author_login = $user->user_login;
@@ -198,11 +195,11 @@ class author_image_admin {
 					}
 				}
 			}
-			
-			delete_transient('author_image_cache');
-			delete_usermeta($user_ID, 'author_image_cache');
 		}
 
+		delete_transient('author_image_cache');
+		delete_usermeta($user_ID, 'author_image_cache');
+		
 		return $user_ID;
 	} # save_image()
 } # author_image_admin

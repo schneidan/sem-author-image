@@ -81,6 +81,11 @@ When displaying wide videos, images or tabular data, it becomes desirable to bum
 
 == Change Log ==
 
+= 4.0.1 =
+
+- Fix for authors with a space in their username
+- Tweak the default Widget Contexts
+
 = 4.0 =
 
 - WP_Widget class

@@ -3,7 +3,7 @@ Contributors: Denis-de-Bernardy
 Donate link: http://www.semiologic.com/partners/
 Tags: author-image, semiologic
 Requires at least: 2.8
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: trunk
 
 
@@ -80,6 +80,10 @@ When displaying wide videos, images or tabular data, it becomes desirable to bum
 
 
 == Change Log ==
+
+= 4.0.2 =
+
+- WP 3.0 compat
 
 = 4.0.1 =
 

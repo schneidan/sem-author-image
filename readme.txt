@@ -1,11 +1,12 @@
 === Author Image ===
-Contributors: Denis-de-Bernardy
+Contributors: Denis-de-Bernardy, Mike_Koepke
 Donate link: http://www.semiologic.com/partners/
 Tags: author-image, semiologic
-Requires at least: 2.8
-Tested up to: 3.2.1
+Requires at least: 3.1
+Tested up to: 3.5.1
 Stable tag: trunk
-
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Lets you easily add author images on your site.
 
@@ -48,8 +49,8 @@ If you require more dedicated assistance, consider using [Semiologic Pro](http:/
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Make the `wp-content` folder writable by your server (chmod 777)
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Make the `wp-content` folder writable by your server (chmod 777)
 
 
 == Screenshots ==
@@ -87,6 +88,14 @@ This can be done by setting two constants in your `wp-config.php` file:
 
 
 == Change Log ==
+
+= 4.1.1 =
+
+- Removed non-static function warning
+
+= 4.1 =
+
+- Fix deprecated functions that caused the plugin to break with WP 3.5
 
 = 4.0.4 =
 

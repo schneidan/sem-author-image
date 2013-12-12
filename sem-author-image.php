@@ -235,7 +235,7 @@ class author_image extends WP_Widget {
 	 * @return string $image
 	 */
 
-	function get($author_id = null, $instance = null, $width = null, $height = null) {
+	function get($author_id = null, $instance = null, $width = null, $height = null, $url = false) {
 		if ( !$author_id ) {
 			if ( in_the_loop() ) {
 				$author_id = get_the_author_meta('ID');
@@ -250,7 +250,11 @@ class author_image extends WP_Widget {
 			}
 		}
 
-        $author_image = author_image::get_author_image($author_id, $width, $height);
+        $author_image = author_image::get_author_image($author_id, $width, $height, $url);
+
+        if ($url) { 
+   			return $author_image;
+   		}
 
         $instance = wp_parse_args($instance, author_image::defaults());
      	extract($instance, EXTR_SKIP);
@@ -287,7 +291,7 @@ class author_image extends WP_Widget {
      * @return string $image
      */
 
-   	function get_author_image($author_id, $width = null, $height = null) {
+   	function get_author_image($author_id, $width = null, $height = null, $url = false) {
 
    		$author_image = get_user_meta($author_id, 'author_image', true);
 
@@ -300,6 +304,10 @@ class author_image extends WP_Widget {
         $author_name = author_image::get_author_name($author_id);
 
    		$author_image = content_url() . '/authors/' . str_replace(' ', rawurlencode(' '), $author_image);
+
+   		if ($url) { 
+   			return esc_url($author_image);
+   		}
 
         if ( !empty($width) ) {
 	        if ( empty ($height) )
@@ -539,6 +547,19 @@ function the_author_image_size($width, $height, $author_id = null) {
     global $author_image;
 
 	echo $author_image->get($author_id, null, $width, $height);
+} # the_author_image()
+
+/**
+ * the_author_image_url()
+ *
+ * @param null $author_id
+ * @return void
+ */
+
+function the_author_image_url($author_id = null) {
+    global $author_image;
+
+	return $author_image->get($author_id, null, null, null, true);
 } # the_author_image()
 
 /**

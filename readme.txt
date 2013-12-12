@@ -10,6 +10,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Lets you easily add author images on your site.
 
 
+== Changes ==
+
+By Daniel J. Schneider, 12/12/2013
+
+Adds new function `the_author_image_url()` which returns only the raw URL of whatever image the plugin finds.
+
+
 == Description ==
 
 The Author Image plugin for WordPress lets you easily add author images on your site.

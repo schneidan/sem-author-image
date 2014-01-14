@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Author Image
+Plugin Name: Author Image [modified]
 Plugin URI: http://www.semiologic.com/software/author-image/
 Description: Adds authors images to your site, which individual users can configure in their profile. Your wp-content folder needs to be writable by the server.
 Version: 4.5
